@@ -15,12 +15,24 @@ package com.algorithm.leetcode.easy;
 // Related Topics 数组 双指针
 // 👍 1228 👎 0
 
+import java.util.ArrayList;
+
 /**
  * @author rensong.pu
  * @date 2021/9/18 10:30 星期六
  **/
 public class 移动零 {
     public static void main(String[] args) {
+
+        ArrayList list = new ArrayList(-1);
+        list.add("1");
+        list.add("2");
+        list.add("3");
+        list.add("4");
+        list.add("5");
+
+        System.out.println(list);
+
         int[] nums= new int[]{1,1,0,1,1,1};
 //        new 移动零().moveZeroes(nums);
         int count1 = 0;
