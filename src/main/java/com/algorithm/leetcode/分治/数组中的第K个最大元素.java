@@ -41,7 +41,23 @@ public class 数组中的第K个最大元素 {
     }
 
     public static void main(String[] args) {
-        int[] examples = {3, 2, 1, 5, 6, 4};
-        System.out.println(new 数组中的第K个最大元素().findKthLargest(examples,2));
+        // 示例字符串
+        String text = "This is a test string with #$# symbols and another";
+
+        // 检查字符串中 "#$#" 的出现次数
+        int count = text.split("#\\$#").length - 1;
+
+        // 根据出现次数进行处理
+        if (count == 2) {
+            // 如果有两处 "#$#"，则打印 "aaa"
+            System.out.println("aaa");
+        } else if (count == 1) {
+            // 如果有一处 "#$#"，则替换为 ""
+            text = text.replace(" #$#", "");
+            System.out.println(text);
+        } else {
+            // 如果没有 "#$#" 或有多于两处，这里不做处理
+            System.out.println("No action taken.");
+        }
     }
 }

@@ -30,11 +30,25 @@ public class 滑动窗口最大值 {
         int index = 0;
         for (int i = 0; i < nums.length; i++) {
             if (queue.size() == 3) {
-                result[index] = queue.peek();
-                queue.poll();
+                result[index++] = queue.peek();
             }
-            queue.offer(nums[i]);
+            if(nums[i]>result[index]){
+                // 大于堆顶元素,先弹出，再加入
+                queue.poll();
+                queue.offer(nums[i]);
+            }else {
+                result[index++] = result[index];
+            }
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{1,3,-1,-3,5,3,6,7};
+        int k= 3;
+        int[] rs = new 滑动窗口最大值().maxSlidingWindow(nums, k);
+        for (int i = 0; i < rs.length; i++) {
+            System.out.println(rs[i]);
+        }
     }
 }

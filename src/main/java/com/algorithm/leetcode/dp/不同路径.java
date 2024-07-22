@@ -57,7 +57,8 @@ import java.util.Arrays;
  **/
 public class 不同路径 {
     public static void main(String[] args) {
-        System.out.print(new 不同路径().uniquePaths(51,9) + "\t"); //1916797311
+        System.out.print(new 不同路径().uniquePaths(3,2) + "\t"); //1916797311
+//        System.out.print(new 不同路径().F(51,9) + "\t"); //1916797311
 
 //        for (int i = 1; i <= 10; i++) {
 //            for (int j = 1; j <= 10; j++) {

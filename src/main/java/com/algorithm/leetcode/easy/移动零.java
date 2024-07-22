@@ -24,31 +24,26 @@ import java.util.ArrayList;
 public class 移动零 {
     public static void main(String[] args) {
 
-        ArrayList list = new ArrayList(-1);
-        list.add("1");
-        list.add("2");
-        list.add("3");
-        list.add("4");
-        list.add("5");
-
-        System.out.println(list);
-
         int[] nums= new int[]{1,1,0,1,1,1};
-//        new 移动零().moveZeroes(nums);
-        int count1 = 0;
-        int result = 0;
+        new 移动零().moveZeroes(nums);
+
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 1) {
-                ++count1;
-            } else {
-                result = Math.max(count1, result);
-                count1 = 0;
-            }
-            if (i == nums.length - 1) {
-                result = Math.max(count1, result);
-            }
+            System.out.print(nums[i]+"\t");
         }
-        System.out.println(result);
+//        int count1 = 0;
+//        int result = 0;
+//        for (int i = 0; i < nums.length; i++) {
+//            if (nums[i] == 1) {
+//                ++count1;
+//            } else {
+//                result = Math.max(count1, result);
+//                count1 = 0;
+//            }
+//            if (i == nums.length - 1) {
+//                result = Math.max(count1, result);
+//            }
+//        }
+//        System.out.println(result);
     }
 
 
